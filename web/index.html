@@ -29,7 +29,6 @@
     <script src=""></script>
 </head>
 <!--内容体，静态标签，符合HTML语法规范的。都会显示在浏览器的窗口中-->
-<body>
     <!--html内部标签要有开闭操作 1、<div></div>   2、<a/>-->
     <!--
     px:像素，屏幕中组成一幅画或者图片的基本单位 334x562 前面为宽后面为高
@@ -37,15 +36,18 @@
     dp、dpi :安卓手机中像素值 ldpi,mdpi,hdpi,xhdpi,xxhdpi(1080x1920p)清晰度
     -->
     <font size="33px" color="red">自己写的字号</font>
-    <span style="font-size: 40px"></span>
+    <span style="font-size: 40px">这是一个span行内标签</span>
 
     <!--
         块级元素:
         每个块级元素独占一行高度，一行中有一个块级元素之后，不允许放入其它标签(不包含人为改变)
+        块级元素一般可以嵌套块级元素或行级元素<div><div></div></div>
+        宽、高可自行设定，且可以改变内边距
+        宽度默认为容器的100%,除非手动改变
 
         行内元素（内联元素）：
         行内元素一般称为基本元素，<span>允许与其它元素放在同一行
-        
+        宽与高不允许设定，设定了也不生效。内边距不可改变padding：元素与内容之间的边距
     -->
     <h1>hn标签中最大的字体</h1>
     <h2>hn标签中2号的字体</h2>
@@ -53,6 +55,71 @@
     <h4>hn标签中4的字体</h4>
     <h5>hn标签中5的字体</h5>
     <h6>hn标签中最小的字体</h6>
+    <hr/> <!--表示横线 无内容标签 ，自行闭合标签 块级标签-->
+    <p> <!--段落，块级元素-->
+        这是一个段落标签
+    </p>
+    <p>
+        这是一个段落标签。。。。。。
+    </p>
+    <!--
+        图片标签:
+        行内嵌套元素:可以设定宽、高，因为内嵌的元素可设定宽高
+        src:目录
+        查找下级目录中的元素，直接写跟它平级的目录，依次往下查找
+        若是上级目录中的元素，需要加上../文件名称(多层 ../../)
+    -->
+    <img src="img/small04.jpg" style="height: 100px;width: 100px" alt="图片加载异常时访问此属性"/><span style="font-size: 40px">测试IMG标签</span>
+    <!--有序列表，块级元素 默认序列号从1开始 start可以改变序列开始值-->
+    <ol type="a" start="3">
+        <li>咖啡</li>
+        <li>红牛</li>
+        <li>雪碧</li>
+    </ol>
+    <!--无序列表，块级元素 默认前面加. 编写导航栏使用-->
+    <ul>
+        <li>咖啡</li>
+        <li>红牛</li>
+        <li>雪碧</li>
+    </ul>
+    <!--超链接标签
+        _blank:新打开一个窗口访问内容
+        _self: 默认在本窗口打开
+        href: 通常是一个接口地址
+        text-decoration : none  可以去掉下划线
+    -->
+    <a href="http://www.baidu.com" target="_self" style="text-decoration: none">点击跳转百度</a>
+    <!--表格标签：块级元素，
+        border : 设定外边框
+        cellpadding ：单元格的内边距  格与内容之间
+        cellspacing : 单元格的外边距  格与格之间
+        align : center 控制横向居中显示
+        若每一行的高度设定了，table的高度就是所有行的高度之和 + 单元格的边距
+       -->
+    <table border="1px" style="width:300px; border-color: white" cellpadding="0px" cellspacing="0px" align="center">
+        <tr style="height: 100px ; background-color: green">
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="height: 100px ; background-color: red">
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr  style="height: 100px ; background-color: gainsboro">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="height: 100px ; background-color: dodgerblue">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
 </body>
 </html>

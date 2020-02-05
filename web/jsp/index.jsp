@@ -12,5 +12,6 @@
   </head>
   <body>
   第一次编写web项目.
+    <img src="../img/small04.jpg"/>
   </body>
 </html>
