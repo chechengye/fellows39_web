@@ -64,7 +64,7 @@
     </p>
     <!--
         图片标签:
-        行内嵌套元素:可以设定宽、高，因为内嵌的元素可设定宽高
+        行内替换元素:可以设定宽、高，因为内嵌的元素可设定宽高
         src:目录
         查找下级目录中的元素，直接写跟它平级的目录，依次往下查找
         若是上级目录中的元素，需要加上../文件名称(多层 ../../)
@@ -120,6 +120,25 @@
             <td></td>
         </tr>
     </table>
-
+    <hr/>
+    <!--
+        表单的介绍与使用(注册表单)
+        <input>行内元素
+    -->
+    <!--
+     action : 可以配置相关页面或者java后台提供的接口,当点击提交按钮时自动调用
+     ?username=zhangsan&password=123 : 地址中多参数的展现形式，
+        第一个参数我们使用?作为连接key=value之后的所有参数&key=value&key=value
+        method : 提交到服务端的方式 默认是get，显示参数信息
+        post : 隐藏提交参数信息,相对安全。一些抓包工具还是可以抓得到的
+    -->
+    <form action="#" method="post">
+        用户名:<input type="text" name="username"/><br/> <!--br换行符-->
+        密码: <input type="password" name="password"/><br/>
+        性别: <input type="radio" name="sex"/>男<input type="radio" name="sex"/>女<br/>
+        爱好: <input type="checkbox" name="enjoy"/>篮球 <input type="checkbox" name="enjoy"/>足球 <input type="checkbox" name="enjoy"/>乒乓球<br/>
+        选择文件: <input type="file"/><br/>
+        <input type="submit" value="注册"><input type="reset" value="重置"/>
+    </form>
 </body>
 </html>
