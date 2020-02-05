@@ -1,10 +1,58 @@
 <!DOCTYPE html>
+<!--html注释方式-->
+<!--<html>是html或htm文件的跟标签-->
 <html lang="en">
+<!--头标签-->
 <head>
-    <meta charset="UTF-8">
+    <!--
+    <meta>标签: charset指定字符集(UTF-8)
+    页面描述 : 告诉搜索引擎你网址的主要内容,在baidu或者谷歌搜索内容的时候的一个爆光率
+    关键字: keywords ,有助于搜索引擎的SEC优化，但是只能提高一点，并不能达到竞价排行(花钱买排名)
+    http-equiv - refresh: 延迟刷新跳转 , 3s之后会做刷新处理。跟上,号网址的操作即可跳转
+    http-equiv - content-type : 控制内容中的编码格式
+    -->
+    <!--<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="refresh" content="3,http://www.baidu.com">-->
+    <meta name="keywords" charset="UTF-8" content="唯创，线上课，教学...">
+    <meta name="description" charset="UTF-8" content="唯创网讯线上课程教学">
+    <!--
+        <title>标签：标题，或主题
+    -->
     <title>web.xml默认配置寻找的第一个页面</title>
+    <!--
+        <link>标签：关联或引入静态资源 。主要应用引入外部CSS样式
+        <link href="">
+    -->
+    <!--定义内部CSS样式-->
+    <style></style>
+    <!--主要应用引入JS样式-->
+    <script src=""></script>
 </head>
+<!--内容体，静态标签，符合HTML语法规范的。都会显示在浏览器的窗口中-->
 <body>
+    <!--html内部标签要有开闭操作 1、<div></div>   2、<a/>-->
+    <!--
+    px:像素，屏幕中组成一幅画或者图片的基本单位 334x562 前面为宽后面为高
+    dp、dpi、sp、pt等等
+    dp、dpi :安卓手机中像素值 ldpi,mdpi,hdpi,xhdpi,xxhdpi(1080x1920p)清晰度
+    -->
+    <font size="33px" color="red">自己写的字号</font>
+    <span style="font-size: 40px"></span>
+
+    <!--
+        块级元素:
+        每个块级元素独占一行高度，一行中有一个块级元素之后，不允许放入其它标签(不包含人为改变)
+
+        行内元素（内联元素）：
+        行内元素一般称为基本元素，<span>允许与其它元素放在同一行
+        
+    -->
+    <h1>hn标签中最大的字体</h1>
+    <h2>hn标签中2号的字体</h2>
+    <h3>hn标签中3的字体</h3>
+    <h4>hn标签中4的字体</h4>
+    <h5>hn标签中5的字体</h5>
+    <h6>hn标签中最小的字体</h6>
 
 </body>
 </html>
