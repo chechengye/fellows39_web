@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <!--action="/registerServlet"  提交此表单到servlet中 -->
+    <form method="post" action="/registerServlet">
+        <table width="600px" align="center" border="1px" cellspacing="0px" cellpadding="0px">
+            <tr height="40px">
+                <td colspan="2"><span style="font-size:25px;">会员注册</span> USER REGISTER</td>
+            </tr>
+            <tr height="40px">
+                <td>用户名</td>
+                <!--placeholder : 提示作用，并不参与运算,若input中输入任意内容，此提示隐藏-->
+                <td><input type="text" placeholder="请输入用户名" maxlength="15" style="height: 30px;width: 200px;" name="username"/></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" placeholder="请输入密码" style="height: 30px;width: 200px;" name="password"/></td>
+            </tr>
+            <tr height="40px">
+                <td>确认密码</td>
+                <td><input type="password" placeholder="请再次输入密码" style="height: 30px;width: 200px;" name="repassword"/></td>
+            </tr>
+            <tr height="40px">
+                <td>邮箱</td>
+                <td><input type="email" placeholder="请输入邮箱" style="height: 30px;width: 200px;" name="email"/></td>
+            </tr>
+            <tr height="40px">
+                <td>姓名</td>
+                <td><input type="text" placeholder="请输入真实姓名" maxlength="15" style="height: 30px;width: 200px;" name="name"/></td>
+            </tr>
+            <tr height="40px">
+                <td>性别</td>
+                <td><input type="radio" name="sex"/>男<input type="radio" name="sex"/>女</td>
+            </tr>
+            <tr height="40px">
+                <td>验证码</td>
+                <td>
+                    <input type="text" placeholder="请输入验证码" maxlength="15" style="height: 30px;width: 100px;" name="code"/>
+                    <img src="img/yanzhengma.png"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

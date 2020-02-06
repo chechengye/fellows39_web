@@ -49,12 +49,12 @@
         行内元素一般称为基本元素，<span>允许与其它元素放在同一行
         宽与高不允许设定，设定了也不生效。内边距不可改变padding：元素与内容之间的边距
     -->
-    <h1>hn标签中最大的字体</h1>
+    <!--<h1>hn标签中最大的字体</h1>
     <h2>hn标签中2号的字体</h2>
     <h3>hn标签中3的字体</h3>
     <h4>hn标签中4的字体</h4>
     <h5>hn标签中5的字体</h5>
-    <h6>hn标签中最小的字体</h6>
+    <h6>hn标签中最小的字体</h6>-->
     <hr/> <!--表示横线 无内容标签 ，自行闭合标签 块级标签-->
     <p> <!--段落，块级元素-->
         这是一个段落标签
@@ -96,7 +96,7 @@
         align : center 控制横向居中显示
         若每一行的高度设定了，table的高度就是所有行的高度之和 + 单元格的边距
        -->
-    <table border="1px" style="width:300px; border-color: white" cellpadding="0px" cellspacing="0px" align="center">
+    <!--<table border="1px" style="width:300px; border-color: white" cellpadding="0px" cellspacing="0px" align="center">
         <tr style="height: 100px ; background-color: green">
             <td colspan="2"></td>
             <td></td>
@@ -119,7 +119,7 @@
             <td></td>
             <td></td>
         </tr>
-    </table>
+    </table>-->
     <hr/>
     <!--
         表单的介绍与使用(注册表单)
@@ -138,6 +138,14 @@
         性别: <input type="radio" name="sex"/>男<input type="radio" name="sex"/>女<br/>
         爱好: <input type="checkbox" name="enjoy"/>篮球 <input type="checkbox" name="enjoy"/>足球 <input type="checkbox" name="enjoy"/>乒乓球<br/>
         选择文件: <input type="file"/><br/>
+        <select name="province">
+            <option>请选择</option>
+            <option value="1">北京</option>
+            <option value="2" selected="true">上海</option>
+            <option value="3">黑龙江</option>
+        </select><br/>
+        <!--文本编辑器 地三方写好的，拿来直接使用-->
+        <textarea name="textarea">我是一个文本输入域</textarea>
         <input type="submit" value="注册"><input type="reset" value="重置"/>
     </form>
 </body>
