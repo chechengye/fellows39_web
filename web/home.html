@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商城首页</title>
+    <style>
+
+        div#logoDiv{
+            border: 1px solid;
+            width: 1100px;
+            height: 50px;
+        }
+        div#logoDiv div{
+            float: left;
+            width: 360px;
+        }
+        div#logoDiv div#infoDiv{
+            height: 50px;
+            line-height: 50px;
+        }
+
+        div#daohang{
+            width: 1100px;
+            height: 50px;
+            background: black;
+            line-height: 50px;
+        }
+        /*ul标签 默认有10px的外边距*/
+        div#daohang ul{
+            margin: 0;
+        }
+        div#daohang ul li{
+            float: left;
+            color: white;
+            list-style: none;
+        }
+        /*div#banner{
+            border: 1px solid;
+            width:1100px;
+            height: 100px;
+        }*/
+        div#goodsList div{
+            float: left;
+        }
+        /*text-align: center; 让元素中的内容进行横向居中*/
+        div#goodsList .goods{
+            width: 200px;
+            height: 180px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!--<span id="logoDiv"></span>-->
+    <div id="logoDiv">
+        <div><img src="img/logo.png" height="40px;"/></div>
+        <div><img src="img/header.png" height="40px"/></div>
+        <div id="infoDiv">
+            <!--空格再html文档流中只识别一个可以使用&nbsp替换-->
+            <a href="#">登陆&nbsp&nbsp</a>
+            <a href="#">注册&nbsp&nbsp</a>
+            <a href="#">购物车   </a>
+        </div>
+    </div>
+    <div id="daohang">
+        <ul>
+            <li><span style="font-size: 25px">首页&nbsp&nbsp</span></li>
+            <li>手机数码&nbsp&nbsp</li>
+            <li>电脑办公&nbsp&nbsp</li>
+            <li>鞋靴箱包&nbsp&nbsp</li>
+            <li>家用电器</li>
+        </ul>
+    </div>
+    <div id="banner">
+        <img src="img/1.jpg" style="width: 1100px;height: 300px;margin-top: -3px;">
+    </div>
+    <div id="goodsTips">
+        <span style="font-size: 25px">最新商品&nbsp&nbsp&nbsp</span><img src="img/title2.jpg"/>
+    </div>
+    <div id="goodsList">
+        <div id="left"><img src="img/big01.jpg" style="width: 130px"/></div>
+        <div id="right"><img src="img/middle01.jpg" style="height: 260px"/></div>
+        <div class="goods">
+            <img src="img/small01.jpg"/>
+            <p><span style="font-size: 15px;color: gray">豆浆机</span></p>
+            <p><span style="color: red">¥499</span></p>
+        </div>
+        <div class="goods">
+            <img src="img/small01.jpg"/>
+            <p><span style="font-size: 15px;color: gray">豆浆机</span></p>
+            <p><span style="color: red">¥499</span></p>
+        </div>
+        <div class="goods">
+            <img src="img/small01.jpg"/>
+            <p><span style="font-size: 15px;color: gray">豆浆机</span></p>
+            <p><span style="color: red">¥499</span></p>
+        </div>
+    </div>
+</body>
+</html>

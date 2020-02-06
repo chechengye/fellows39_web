@@ -28,25 +28,45 @@
             width: 100px;
         }
 
-        #div1{
-            width: 100px;
+       /* #div1{
+            width: 961px;
             height: 100px;
             background: yellow;
-            display: none;
             float: left;
         }
         #div2{
             width: 100px;
             height: 100px;
             background: blue;
-
+            float: left;
 
         }
         #div3{
             width: 100px;
             height: 100px;
             background: green;
+            float: left;
 
+        }
+        */
+        #div1{
+            width: 961px;
+            height: 100px;
+            background: yellow;
+            display: inline-block;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: blue;
+            display: inline-block;
+
+        }
+        #div3{
+            width: 100px;
+            height: 100px;
+            background: green;
+            display: inline-block;
 
         }
         .drink{
@@ -59,15 +79,16 @@
     style="" ：直接写在元素或标签内部的，称为内联css样式
     div为块级元素，所以不设置宽度的时候，默认占的是100%
     高度是内容的高度，div默认的内边距
-
+    盒子模型的内边距：padding 默认从0,0坐标开始左上角。默认的坐标方位为左、上、右、下
+    若元素从默认开始位置时，调整右与下的内边距并不能影响内容相对于元素的位置
     -->
-    <!--<div id="div1" style="background: red">女装鞋包</div>
+    <div id="div1" style="background: red;padding-top: 20px;padding-left: 30px;margin-top:50px;margin-right: 10px;margin-bottom: 10px;">女装鞋包</div>
 
     <div id="div2" class="drink">酒类</div>
 
     <div id="div3" class="drink">饮料</div>
 
-    <div id="div4" class="drink">数码产品</div>-->
+    <div id="div4" class="drink">数码产品</div>
 
 
     <!--
@@ -79,9 +100,13 @@
         相当于将display属性设定为inline-block。
         浮动的停止条件:直到它的外边缘碰到包含框或另一个浮动框的边框为止
         display:none 隐藏一个元素
+        display:inline-block 设定元素为行块级元素，同时具备行与块元素的属性
+        display:block 设定成块级元素
+        display:inline 设定成行内元素
     -->
-    <div id="div1"></div>
+    <!--<div id="div1"></div>
     <div id="div2"></div>
-    <div id="div3"></div>
+    <div id="div3"></div>-->
+
 </body>
 </html>
