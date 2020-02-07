@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
+    <script>
+        function checkUser() {
+            var userName = document.getElementById("user_name");
+            if(userName.value == "" || userName.length > 15){
+                alert("用户名输入不合法");
+            }
+            var password = document.getElementById("password");
+            var rePassword = document.getElementById("re_password");
+            if(password.value != rePassword.value){
+                alert("两次密码不一致")
+            }
+        }
+        function usernameFocus() {
+            document.getElementById("userSpan").innerHTML = "<font color='gray'>请填写用户名<font>";
+        }
+
+        function usernameBlur() {
+            var userName = document.getElementById("user_name");
+            if(userName.value == ""){
+                document.getElementById("userSpan").innerHTML = "<font color='red'>用户名不允许为空<font>"
+            }else{
+                document.getElementById("userSpan").innerHTML = "";//置空操作
+            }
+        }
+        function emailFocus() {
+            document.getElementById("email_span").innerHTML = "<font color='gray'>请填写QQ邮箱、网易邮箱、新浪邮箱<font>";
+        }
+        function emailBlur() {
+            var email = document.getElementById("email");
+            var regExp = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+            var b = regExp.test(email.value);
+            if(b){
+                document.getElementById("email_span").innerHTML = "";
+            }else{
+                document.getElementById("email_span").innerHTML = "<font color='red'>邮箱输入不合法<font>";
+            }
+        }
+
+    </script>
 </head>
 <body>
     <!--action="/registerServlet"  提交此表单到servlet中 -->
-    <form method="post" action="/registerServlet">
+    <form method="post" action="/registerServlet" onsubmit="checkUser()">
         <table width="600px" align="center" border="1px" cellspacing="0px" cellpadding="0px">
             <tr height="40px">
                 <td colspan="2"><span style="font-size:25px;">会员注册</span> USER REGISTER</td>
@@ -14,19 +53,25 @@
             <tr height="40px">
                 <td>用户名</td>
                 <!--placeholder : 提示作用，并不参与运算,若input中输入任意内容，此提示隐藏-->
-                <td><input type="text" placeholder="请输入用户名" maxlength="15" style="height: 30px;width: 200px;" name="username"/></td>
+                <td><input id="user_name" type="text" placeholder="请输入用户名" maxlength="15" style="height: 30px;width: 200px;" name="username" onfocus="usernameFocus()" onblur="usernameBlur()"/>
+                    <span id="userSpan"></span>
+                </td>
+
             </tr>
             <tr>
                 <td>密码</td>
-                <td><input type="password" placeholder="请输入密码" style="height: 30px;width: 200px;" name="password"/></td>
+                <td><input id="password" type="password" placeholder="请输入密码" style="height: 30px;width: 200px;" name="password"/></td>
             </tr>
             <tr height="40px">
                 <td>确认密码</td>
-                <td><input type="password" placeholder="请再次输入密码" style="height: 30px;width: 200px;" name="repassword"/></td>
+                <td><input id="re_password" type="password" placeholder="请再次输入密码" style="height: 30px;width: 200px;" name="repassword"/></td>
             </tr>
             <tr height="40px">
                 <td>邮箱</td>
-                <td><input type="email" placeholder="请输入邮箱" style="height: 30px;width: 200px;" name="email"/></td>
+                <td>
+                    <input id="email" type="email" placeholder="请输入邮箱" style="height: 30px;width: 200px;" name="email" onfocus="emailFocus()" onblur="emailBlur()"/>
+                    <span id="email_span"></span>
+                </td>
             </tr>
             <tr height="40px">
                 <td>姓名</td>

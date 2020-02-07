@@ -3,6 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>商城首页</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        function init() {
+            setInterval("changeImg()" , 3000);
+        }
+        var i = 1;
+        function changeImg() {
+            i ++;
+            var bannerImg = document.getElementById("banner_img");
+            bannerImg.src = "img/"+ i +".jpg";
+            if( i == 3){
+                i = 0;
+            }
+        }
+        $(function () {
+           // alert(1)
+           setTimeout("showAd()" , 3000);
+        });
+        function showAd() {
+            $("#ad_img").fadeIn(1000);
+            setTimeout("hideAd()" , 2000);
+        }
+        function hideAd() {
+            $("#ad_img").fadeOut(2000);
+        }
+    </script>
     <style>
 
         div#logoDiv{
@@ -53,8 +79,9 @@
         }
     </style>
 </head>
-<body>
+<body onload="init()">
     <!--<span id="logoDiv"></span>-->
+    <img src="img/ad_show.jpg" id="ad_img" style="display: none"/>
     <div id="logoDiv">
         <div><img src="img/logo.png" height="40px;"/></div>
         <div><img src="img/header.png" height="40px"/></div>
@@ -75,7 +102,7 @@
         </ul>
     </div>
     <div id="banner">
-        <img src="img/1.jpg" style="width: 1100px;height: 300px;margin-top: -3px;">
+        <img id="banner_img" src="img/1.jpg" style="width: 1100px;height: 300px;margin-top: -3px;">
     </div>
     <div id="goodsTips">
         <span style="font-size: 25px">最新商品&nbsp&nbsp&nbsp</span><img src="img/title2.jpg"/>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery语法学习</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        //默认的加载方法body中配置的onload 或者 window.onload写多个的时候，只会执行最后一个.
+        //$(function(){})；可以写多个，且会依次执行
+        //相当于window.onload
+        /*window.onload = function () {
+            alert("张三");
+        }
+        window.onload = function () {
+            alert("李四");
+        }*/
+        $(function () {
+            //alert("张三")
+            $("#info").val("测试val")
+            $("#span").html($("#span").html() + "测试html()方法"); //取值与存值都是一个
+        });
+       /* $(function () {
+            alert("李四")
+        });*/
+    </script>
+</head>
+<body>
+    <input id="info" type="text" value="美美哒"/>
+    <br/><span id="span">jquery测试span应用</span>
+</body>
+</html>
