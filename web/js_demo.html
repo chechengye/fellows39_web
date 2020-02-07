@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS应用</title>
+    <script src="js/js_demo.js"></script>
+    <script type="text/javascript">
+        /*内部JS定义  type="text/javascript" ： 可以省略*/
+        var a = "10";
+        var i = 10;
+        var number;
+        /*window对象，可以实现页面启动调用的方法*/
+        //window.location.href = "http://"
+        window.onload = function () {//匿名的方法起名方式
+            /* 等性运算符 == 可以自动类型转换   ===不会进行自动类型转换 */
+            if(a === i){
+                /*弹出提示框，窗口window对象*/
+                window.alert("自动类型转换");
+            }else{
+                //alert("非自动类型转换")
+            }
+            var array = new Array();
+            //alert(new Date());
+            //id相当于是一个key
+            /*
+             * DOM对象getElementById根据一个id获取元素（标签）
+             */
+            var elementById = document.getElementById("userDiv");
+
+            //alert(elementById.value)
+            //alert(document.getElementById("span").innerText)
+            var span = document.getElementById("span");
+            span.innerHTML = span.innerText + "测试innerHTML 输入功能";//字符串拼接
+            //向文档流中写入新的串 ，在我们java存servlet时代，使用非常频繁
+            //document.write("<input id=\"userDiv\" type=\"text\" value=\"zhangsan\"/><br/>" + "测试write方法");
+            /*
+                setInterval()此方法可以按照指定周期来调用计算表达式，或者相关操作。以毫秒计数
+                clearInterVal()
+                setTimeout()也是毫秒单位，此方法延迟多少时间后，进行操作
+                引用方法的引号不允许丢掉
+                clearTimeout()
+             */
+            number = setInterval("func()" , 2000);
+            timeout = setTimeout("func_method()" , 3000);
+        }
+        var timeout;
+        var count = 0;//定义在方法外的变量相当于全局变量，所有方法共用。定义于方法内的变量称为局部变量
+        function func() {
+            //window.location.href = "http://www.baidu.com";
+            alert(count++);
+            var b = confirm("您确定要清除循环吗?");
+            if(b){//b为 true点击了确定按钮，false点击了取消按钮,默认隐藏按钮
+                clearInterval(number);
+            }
+            if(count == 2){
+                clearInterval(number); //成对出现时，需要操作同一个handler把手
+            }
+        }
+        function func_method() {
+            var str = prompt("请输入您的建议:");
+            alert(str);
+            if(count == 1){
+                clearTimeout(timeout)
+            }else{
+                window.location.href = "http://www.baidu.com";
+            }
+        }
+        function check_form() { //方法定义格式
+            //alert("check_form 被提交校验")
+        }
+    </script>
+</head>
+<body>
+    <input id="userDiv" type="text" value="zhangsan"/><br/>
+    <span id="span">这是一个span标签内容</span>
+    <!--check_form多个单词可以使用_进行分割，而且js中的方法名称不建议出现大写字母
+        通常方法写在一个监听事件中的时候要加上()
+    -->
+    <form onsubmit="check_form()">
+        <a onclick="test()" on>测试外部引入js方法</a>
+        <input type="submit" value="提交"/>
+    </form>
+
+</body>
+</html>
