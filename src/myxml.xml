@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    文档声明必须以<?xml开始，?>结尾，且此行代码必须放在1行1列的位置
+    属性:
+    version 是必须属性 目前只有两个版本1.0 ，1.1我们使用1.0版本。不使用1.1
+    encoding： 编码格式 utf-8
+-->
+<!--我们可以进行自定义标签,自定义描述为人的数组.没有类似于html的元素（标签）的硬性要求。只要有正确的开关即可-->
+<persons>
+    <!--person的一对标签称为元素，里面的内容称为元素体。元素体格式可以是元素或文本-->
+    <!--不建议使用Xml相关的字符来命名元素，因为xml文件的后缀就是.xml-->
+    <person id="1">
+        <![CDATA[
+            CDATA区 ; < > &
+            for(int i = 0 ; i < 10 ; i++){
+            }
+        ]]>
+        <name>zhangsan</name>
+        <age>12</age>
+    </person >
+    <person id="2">
+
+    </person>
+</persons>
