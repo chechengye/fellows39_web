@@ -18,5 +18,38 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>-->
+    <!--contextConfigLocation一些框架的配置文件位置信息-->
+    <context-param>
+        <param-name>contextConfig</param-name>
+        <param-value>classpath*:spring.xml</param-value>
+    </context-param>
+
+    <servlet>
+        <!--名称任意但要与servlet-mapping中的名称保持一致-->
+        <servlet-name>QuickStart</servlet-name>
+        <!--真正存在的servlet类，全路径-->
+        <servlet-class>day03Demo.QuickStartServlet</servlet-class>
+
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>配置文件的路径</param-value>
+        </init-param>
+        <!--正整数，数字越小优先级越高，自定义的servlet不建议使用数字1-->
+        <load-on-startup>3</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>QuickStart</servlet-name>
+        <!--url映射，通过浏览器直接访问的地址，或者前端跳转的接口-->
+        <!--完全匹配映射路径的方式-->
+        <url-pattern>/quickStart</url-pattern>
+        <!--虚拟目录匹配-->
+        <url-pattern>/aaa/bbb/*</url-pattern>
+        <!--扩展名匹配 *前面不允许加入其它字符-->
+        <url-pattern>*.abc</url-pattern>
+        <!--配置缺省的servlet，当其它映射都没有匹配时会走缺省的-->
+        <!--<url-pattern>/</url-pattern>-->
+    </servlet-mapping>
+
 
 </web-app>

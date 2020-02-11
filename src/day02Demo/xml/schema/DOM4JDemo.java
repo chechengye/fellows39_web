@@ -22,7 +22,7 @@ public class DOM4JDemo {
             List<Element> elements = rootElement.elements();
             for(Element e : elements){
                 if(e.getName().equals("person")){
-                  
+
                     if(e.attributeValue("id").equals("1")){
                         List<Element> person = e.elements();
                         for(Element p : person){
