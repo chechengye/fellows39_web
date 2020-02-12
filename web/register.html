@@ -45,7 +45,7 @@
 </head>
 <body>
     <!--action="/registerServlet"  提交此表单到servlet中 -->
-    <form method="post" action="/registerServlet" onsubmit="checkUser()">
+    <form method="post" action="/register" onsubmit="checkUser()">
         <table width="600px" align="center" border="1px" cellspacing="0px" cellpadding="0px">
             <tr height="40px">
                 <td colspan="2"><span style="font-size:25px;">会员注册</span> USER REGISTER</td>
@@ -79,8 +79,13 @@
             </tr>
             <tr height="40px">
                 <td>性别</td>
-                <td><input type="radio" name="sex"/>男<input type="radio" name="sex"/>女</td>
+                <td><input type="radio" name="sex" value="男"/>男<input type="radio" name="sex" value="女"/>女</td>
             </tr>
+            <tr height="40px">
+                <td>爱好</td>
+                <td><input type="checkbox" name="enjoy" value="篮球"/>篮球<input type="checkbox" name="enjoy" value="足球"/>足球<input type="checkbox" name="enjoy" value="乒乓球"/>乒乓球</td>
+            </tr>
+
             <tr height="40px">
                 <td>验证码</td>
                 <td>

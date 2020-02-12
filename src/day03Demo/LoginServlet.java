@@ -27,11 +27,13 @@ public class LoginServlet extends HttpServlet{
             QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
             User user = qr.query("select u.username from t_user u where username = ? and password = ?", new BeanHandler<>(User.class), username, password);
             if(null != user){
-                resp.getWriter().write("欢迎,"+ user.getUsername());
+                //resp.getWriter().write("欢迎,"+ user.getUsername());
+                resp.sendRedirect(req.getContextPath() + "/home.html");
             }else{
                 //内部转发回login.html页面，讲解req对象时使用
-
-                resp.getWriter().write("用户名或密码错误!");
+                req.setAttribute("loginInfo" , "用户名或密码错误!");
+                req.getRequestDispatcher("/login.jsp").forward(req , resp);
+                //resp.getWriter().write("用户名或密码错误!");
             }
         } catch (SQLException e) {
             e.printStackTrace();
