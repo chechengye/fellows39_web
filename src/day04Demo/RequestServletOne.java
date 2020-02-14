@@ -17,7 +17,9 @@ public class RequestServletOne extends HttpServlet{
         //测试向域中存值，request域中的内容只会存在于一次内部转发过程中
         req.setAttribute("key" , "123400");
         //内部转发
-        req.getRequestDispatcher("/requestServletTwo").forward(req , resp);
+        //req.getRequestDispatcher("/requestServletTwo").forward(req , resp);
+
+        System.out.println("name ： " + req.getSession().getAttribute("name"));
     }
 
     @Override

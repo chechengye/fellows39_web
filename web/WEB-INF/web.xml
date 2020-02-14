@@ -50,6 +50,10 @@
         <!--配置缺省的servlet，当其它映射都没有匹配时会走缺省的-->
         <!--<url-pattern>/</url-pattern>-->
     </servlet-mapping>
+    <!--<session-config>
+        &lt;!&ndash;单位是分钟&ndash;&gt;
+        <session-timeout>300</session-timeout>
+    </session-config>-->
 
 
 </web-app>
