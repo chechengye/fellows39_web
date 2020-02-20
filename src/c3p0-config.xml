@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c3p0-config>
     <default-config>
-        <property name="diverClass">com.mysql.jdbc.Driver</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
         <property name="jdbcUrl">jdbc:mysql:///fellows39?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT</property>
         <property name="user">root</property>
         <property name="password">root</property>
